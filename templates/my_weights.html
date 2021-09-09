@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+
+{% block article_container %}
+    <p>My weights:</p>
+
+    {% for i in result_weights %}
+
+        <div class="leaderboard">
+
+            <div>
+                User: {{ i[1] }}
+            </div>
+
+            <div>
+                {{ i[2] }} KG
+            </div>
+
+            <div>
+                Date: {{ i[3] }}
+            </div>
+
+            <div>
+
+                <form method="post">
+
+                    {{ form_delete.id_hidden(class="id_hidden", value=i[0])}}
+                    {{ form_delete.delete}}
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+
+    Register new weight:
+    <form method="post">
+        <ul class="ul_new_post">
+            <li>{{ form.weight.label }}</li>
+            <li>{{ form.weight }}</li>
+            <li>{{ form.time_date.label }}</li>
+            <li>{{ form.time_date }}</li>
+            <li>{{ form.video.label }}</li>
+            <li>{{ form.video }}</li>
+            <li>{{ form.submit }}</li>
+        </ul>
+    </form>
+
+{% endblock %}

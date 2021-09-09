@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block article_container %}
+
+    {{ already_logged_in }}
+
+    <form method="post">
+
+    {{ form.username(class='login_field',placeholder="Username") }} <br>
+    {{ form.password(class='login_field',placeholder="Password") }} <br>
+    {{ form.submit }}
+
+    </form>
+
+{% endblock %}

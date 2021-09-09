@@ -1,0 +1,17 @@
+
+
+
+<ul>
+    <li><a href="{{ url_for('index') }}"> Home  </a></li>
+    {% if session.logged_in %}
+        <li><a href="{{ url_for('logout') }}"> Logout</a></li>
+        <li><a href="{{ url_for('new_post') }}"> New Post</a></li>
+        <li><a href="{{ url_for('my_weights') }}"> My Weights</a></li>
+        <li><a href="{{ url_for('leaderboard') }}"> Leaderboard</a></li>
+
+    {% else %}
+        <li><a href="{{ url_for('login') }}"> Login</a></li>
+        <li><a href="{{ url_for('register') }}"> Register</a></li>
+    {% endif %}
+
+</ul>

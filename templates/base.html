@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skitsnack Fitness Challange & Leaderboard!</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+</head>
+<body>
+
+<div id="hmenu">
+
+    <nav>{% include "menu.html" %} </nav>
+
+</div>
+<div id="main">
+    <article>
+
+        {% block article_container %}
+        {% endblock %}
+
+
+    </article>
+    <nav>
+
+    </nav>
+    <aside>
+
+        {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+
+
+    </aside>
+  </div>
+<footer></footer>
+</body>
+</html>

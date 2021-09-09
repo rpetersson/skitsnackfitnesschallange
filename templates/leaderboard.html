@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block article_container %}
+
+    <p>LEADERBOARD: </p><br>
+
+    {% for i in result %}
+
+        <div class="leaderboard">
+
+            <div>
+                User: {{ i[1] }}
+            </div>
+
+            <div>
+                {{ i[2] }} KG
+            </div>
+
+            <div>
+                Date: {{ i[3] }}
+            </div>
+
+            <div>
+
+                {{ delete_button }}
+
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+
+{% endblock %}
+

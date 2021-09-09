@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block article_container %}
+
+    <form method="post" enctype="multipart/form-data">
+
+    <ul class="ul_new_post">
+        <li>{{ form.title.label }}</li>
+        <li>{{ form.title }}</li>
+        <li>{{ form.body.label }}</li>
+        <li>{{ form.body(class="form_body")}}</li>
+        <li> {{ form.post_image(class="post_image") }}</li>
+        <li>{{ form.submit }}</li>
+
+
+    </ul>
+
+    </form>
+
+{% endblock %}

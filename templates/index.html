@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block article_container %}
+
+    {% for i in all_posts %}
+
+        <div class="posts">
+
+
+            <div>
+                {{ i[1] }}
+            </div>
+
+            <div>
+                {{ i[2] }}
+            </div>
+
+            <div>
+                Author: {{ i[3] }}
+            </div>
+
+            <div>
+                {{ i[4] }}
+            </div>
+
+
+            <div class="image_field">
+
+                {% if i[5] == None %}
+                {% else %}
+                    <img src="/upload/images/{{ i[5] }}">
+                {% endif %}
+
+            </div>
+
+
+            <div>
+
+                {{ delete_button }}
+
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

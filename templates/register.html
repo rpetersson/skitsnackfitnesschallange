@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block article_container %}
+
+        <form method="post" enctype="multipart/form-data">
+
+    <ul class="ul_new_post">
+
+        <li>{{ form.username.label }}</li>
+        <li>{{ form.username }}</li>
+        <li>{{ form.password.label }}</li>
+        <li>{{ form.password }}</li>
+        <li>{{ form.first_name.label }}</li>
+        <li>{{ form.first_name }}</li>
+        <li>{{ form.last_name.label }}</li>
+        <li>{{ form.last_name }}</li>
+        <li>{{ form.profile_pic.label }}</li>
+        <li>{{ form.profile_pic }}</li>
+        <li>{{ form.email.label }}</li>
+        <li>{{ form.email }}</li>
+        <li>{{ form.submit }}</li>
+
+    </ul>
+
+    </form>
+
+{% endblock %}
